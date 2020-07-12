@@ -1,13 +1,12 @@
 setup:
-	python3 -m venv ~/.container-revolution-devops
+	python3 -m venv ~/.myrepo
 
 install:
-	pip install --upgrade pip &&\
-	 tuo
+	pip install -r requirements.txt
 
 test:
-    #python -m pytest -vv --cov=myrepolib tests/*.py
-    #python -m pytest --nbval notebook.ipynb
+	python -m pytest -vv --cov=myrepolib tests/*.py
+	python -m pytest --nbval notebook.ipynb
 
 validate-circleci:
     # See https://circleci.com/docs/2.0/local-cli/#processing-a-config
@@ -19,6 +18,6 @@ run-circleci-local:
 
 lint:
 	hadolint demos/flask-sklearn/Dockerfile
-	pylint --disable=R,C,W1203,W1202 demos/**/**.py
+	 --disable=R,C myrepolib cli web
 
 all: install lint test
