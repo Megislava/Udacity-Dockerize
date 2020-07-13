@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![megislava](https://circleci.com/gh/Megislava/Udacity-Dockerize.svg?style=svg)](https://github.com/Megislava/Udacity-Dockerize)
 
 ## Project Overview
 
