@@ -10,7 +10,8 @@ COPY .  /app/
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
 RUN  pip install --upgrade pip==20.1.1 &&\
-    pip install --trusted-host pypi.python.org -r requirements.txt## Step 4:
+    pip install --trusted-host pypi.python.org -r requirements.txt
+## Step 4:
 # Expose port 80
 EXPOSE 80
 ## Step 5:

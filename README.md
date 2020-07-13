@@ -40,3 +40,11 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+# Files Structure
+* Makefile  : contain information about steps to install all the  dependencies and make tests
+* Dockerfile: contain application and dependencies all in a containarized form 
+* run_docker.sh: steps to build and run dockerfile
+* run_kubernetes.sh: contain steps to pull image and deploy container in pod and forward port of it 
+* upload_docker.sh: contain how to push application image to dockerhub
+* requirements.txt: contain all the dependencies packages 
