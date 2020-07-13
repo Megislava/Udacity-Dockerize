@@ -8,12 +8,15 @@
 dockerpath="megislava/udacity-project-4"
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run udacity-project-4 --generator=run-pod/v1 --image=$dockerpath --port=80 --labels app=flask-app
-
+kubectl run udacity-project-4\
+    --generator=run-pod/v1\
+    --image=$dockerpath\
+    --port=80 --labels app=udacity-project-4
 
 # Step 3:
 # List kubernetes pods
 kubectl get pods
+
 # Step 4:
 # Forward the container port to a host
 kubectl port-forward udacity-project-4 8000:80
