@@ -21,6 +21,7 @@ jobs:
             wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
             chmod +x /bin/hadolint
             pip3 install pylint
+            make lint
       # - save_cache:
       #     paths:
       #       - ./venv
@@ -28,5 +29,6 @@ jobs:
       - run:
           name: run lint
           command: |
+            python3 -m venv venv
             . venv/bin/activate
             make lint
